@@ -2,6 +2,7 @@ package steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import pages.LoginPage;
 import pages.ProductPage;
 
@@ -33,4 +34,10 @@ public class LoginStep {
     public void verifyProductPage() throws Throwable {
         productPage.checkSwagLabsIcon();
     }
+
+    // @Then("^User verify the error massage \"([^\"]*)\"$") {
+    //     public void verifyErrorMessage(String message) throws Throwable {
+    //         loginPage.ver
+    //     }
+    // }
 }

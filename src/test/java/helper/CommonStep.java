@@ -1,5 +1,7 @@
 package helper;
 
+import static org.junit.Assert.assertEquals;
+
 import java.time.Duration;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -54,5 +56,16 @@ public class CommonStep {
             }
         }
     }
+
+    public void verifyText(By element, String expectedText) {
+        List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(element));
+        for(WebElement alist : list) {
+            if(alist.getText().contains(expectedText)){
+                assertEquals(expectedText, alist.getText());
+                break;
+            }
+        }
+    }
 }
+
 
