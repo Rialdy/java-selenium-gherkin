@@ -35,9 +35,9 @@ public class LoginStep {
         productPage.checkSwagLabsIcon();
     }
 
-    // @Then("^User verify the error massage \"([^\"]*)\"$") {
-    //     public void verifyErrorMessage(String message) throws Throwable {
-    //         loginPage.ver
-    //     }
-    // }
-}
+    @Then("^User verify the error massage \"([^\"]*)\"$")
+        public void verifyErrorMessage(String message) throws Throwable {
+            loginPage.verifyErrorMessage(message);
+        }
+    }
+

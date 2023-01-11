@@ -9,6 +9,7 @@ public class LoginPage {
     private By loginButton = By.id("login-button");
     private By emailField = By.id("user-name");
     private By passwordField = By.id("password");
+    private By errorMessage = By.xpath("//h3[@data-test='error']");
 
     CommonStep commonStep = new CommonStep();
 
@@ -27,5 +28,9 @@ public class LoginPage {
 
     public void inputPassword(String password) throws InterruptedException {
         commonStep.sendKeys(passwordField, password);
+    }
+
+    public void verifyErrorMessage(String message) throws InterruptedException {
+        commonStep.verifyText(errorMessage, message);
     }
 }
