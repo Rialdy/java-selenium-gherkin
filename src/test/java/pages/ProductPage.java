@@ -21,11 +21,11 @@ public class ProductPage {
         commonStep.isDisplayed(productsText);
     }
 
-    public void addSauceLabsBackpackToCart() throws InterruptedException {
+    public void addBackpackToCart(String text) throws InterruptedException {
         commonStep.click(addToCartSauceLabsBackpack);
     }
 
-    public void addSauceLabsBoltShirtToCart() throws InterruptedException {
+    public void addShirtToCart(String text) throws InterruptedException {
         commonStep.click(addToCartSauceLabsBoltShirt);
     }
 

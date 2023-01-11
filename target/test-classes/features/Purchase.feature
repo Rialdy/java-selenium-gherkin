@@ -9,13 +9,13 @@ Feature: User want to purchase product
 
   @purchase001
   Scenario: User login to the page
-    And User add to cart Sauce Labs Backpack
-    And User add to cart Sauce Labs Bolt T-Shirt
+    And User add backpack to cart "Sauce Labs Backpack"
+    And User add shirt to cart "Sauce Labs Bolt T-Shirt"
     And User click cart icon
     Then User verify Your Cart Text
 
 
 
 # mvn test -Dbrowser="chrome"
-# mvn test -Dcucumber.filter.tags="@purchase" -Dbrowser="firefox"
+# mvn test -Dcucumber.filter.tags="@purchase001" -Dbrowser="firefox"
 

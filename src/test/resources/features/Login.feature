@@ -12,4 +12,4 @@ Feature: User want to login to the page
 
 
 # mvn test -Dbrowser="chrome"
-# mvn test -Dcucumber.filter.tags="@login" -Dbrowser="firefox"
+# mvn test -Dcucumber.filter.tags="@login001" -Dbrowser="firefox"
