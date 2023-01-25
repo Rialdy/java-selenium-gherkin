@@ -49,9 +49,10 @@ public class CommonStep {
 
     public void findClick(By element, String text) {
         List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(element));
-        for(WebElement alist : list){
-            if(alist.getText().contains(text)){
-                alist.click();
+        for(WebElement aList : list){
+            if(aList.getText().contains(text)){
+                aList.click();
+                System.out.println(aList.getText());
                 break;
             }
         }
@@ -59,9 +60,10 @@ public class CommonStep {
 
     public void verifyText(By element, String expectedText) {
         List<WebElement> list = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(element));
-        for(WebElement alist : list) {
-            if(alist.getText().contains(expectedText)){
-                assertEquals(expectedText, alist.getText());
+        for(WebElement aList : list) {
+            if(aList.getText().contains(expectedText)){
+                assertEquals(expectedText, aList.getText());
+                System.out.println(aList.getText());
                 break;
             }
         }
