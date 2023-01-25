@@ -11,14 +11,14 @@ public class DriverSetup {
     // String browserName = System.getProperty("browser") == null ? "chrome" : System.getProperty("browser"); 
     // private String defaultBrowser = System.getProperty("browser");
     // String browserName = defaultBrowser != null ? defaultBrowser : "chrome";
-    String browserNameTest = GlobalVariable.DEFAULTBROWSER != null ? GlobalVariable.DEFAULTBROWSER : "chrome";
+    String browserName = GlobalVariable.DEFAULTBROWSER != null ? GlobalVariable.DEFAULTBROWSER : "chrome";
 
     public static WebDriver getBrowser() {
         return webDriver;
     }
 
     protected void browserStart() {
-        switch (browserNameTest.toLowerCase()) {
+        switch (browserName.toLowerCase()) {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
                 webDriver = new ChromeDriver();
@@ -28,7 +28,7 @@ public class DriverSetup {
                 webDriver = new FirefoxDriver();
                 break;
             default:
-                throw new IllegalArgumentException("Invalid browser name: " + browserNameTest);
+                throw new IllegalArgumentException("Invalid browser name: " + browserName);
         }
     }
 
