@@ -35,5 +35,5 @@ public class DriverSetup {
     protected void browserStop() {
             webDriver.close();
         }
-    }
+    }n
 
